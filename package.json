@@ -1,0 +1,19 @@
+{
+  "name": "verificador-servicos",
+  "version": "1.0.0",
+  "description": "Verificador de servicos online",
+  "main": "VerificadorServicos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcel Zanluca",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "google-speech": "0.0.5",
+    "play": "^0.5.0",
+    "play-sound": "0.0.9",
+    "request": "^2.74.0",
+    "say": "^0.9.1"
+  }
+}
