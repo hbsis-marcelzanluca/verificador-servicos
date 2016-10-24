@@ -13,8 +13,7 @@
     "sync-request" : "3.0.1",
     "request": "^2.74.0",
     "say": "^0.9.1",
-    "unirest":"^0.5.0",
-
+    "unirest":"^0.5.0"
 
     /*"fs": "0.0.1-security",
     "google-speech": "0.0.5",
