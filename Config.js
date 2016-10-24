@@ -1,11 +1,10 @@
-/**
- * Created by marcos.busana on 28/09/2016.
- */
-
 
 module.exports  = {
   servidores : [
-    {nome: 'SUL', url: 'localhost:8001', servicos : ['security']},
-    {nome: 'NO', url: 'localhost:8001', servicos : ['security']}
+    {nome: 'Guarulhos', url: 'localhost:8001', servicos : ['blitz-refugo']},
+    {nome: 'SP', url: '54.94.190.76:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
+    {nome: 'MG-NO', url: '54.94.190.76:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
+    {nome: 'Sul-RJ', url: '54.94.190.76:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
+    {nome: 'Revenda', url: '54.94.190.76:8001', servicos : ['security', 'gestao', 'blitz-refugo']}
   ]
 };
