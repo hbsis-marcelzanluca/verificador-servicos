@@ -9,11 +9,11 @@
   "author": "Marcel Zanluca",
   "license": "ISC",
   "dependencies": {
-    "fs": "0.0.1-security",
-    "google-speech": "0.0.5",
-    "play": "^0.5.0",
-    "play-sound": "0.0.9",
+    "async": "^2.1.2",
+    "express": "^4.10.2",
     "request": "^2.74.0",
-    "say": "^0.9.1"
+    "say": "^0.9.1",
+    "sync-request": "3.0.1",
+    "unirest": "^0.5.0"
   }
 }
