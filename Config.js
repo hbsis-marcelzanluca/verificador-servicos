@@ -1,10 +1,10 @@
 
 module.exports  = {
   servidores : [
-    {nome: 'GEO SP', url: '172.19.234.137:8001', servicos : ['blitz-refugo']},
-    {nome: 'GEOs CO, RJ e SUL', url: '172.19.234.48:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
-    {nome: 'GEOs MG, NE e NO', url: '172.19.234.49.:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
-    {nome: 'Guarulhos', url: '172.19.234.67:8001', servicos : ['security', 'gestao', 'blitz-refugo']},
-    {nome: 'Revenda', url: '186.250.185.187.:8001', servicos : ['security', 'gestao', 'blitz-refugo']}
+    /*{nome: 'Guarulhos', url: '172.19.234.67:8001', servicos : ['agendamento-tarefas','blitz-refugo','expedition','gestao','integrations','inventory','notificador','portaria','receipt','routereturn','security','task-interleaving','touchpicking']},
+    {nome: 'SP', url: '172.19.234.137:8001', servicos : ['agendamento-tarefas','blitz-refugo','expedition','gestao','integrations','inventory','notificador','portaria','receipt','routereturn','security','task-interleaving','touchpicking']},
+    {nome: 'CO, RJ e SUL', url: '172.19.234.48:8001', servicos : ['agendamento-tarefas','blitz-refugo','expedition','gestao','integrations','inventory','notificador','portaria','receipt','routereturn','security','task-interleaving','touchpicking']},*/
+    {nome: 'Guarulhos', url: '54.94.195.166:8001', servicos : ['agendamento-tarefas','blitz-refugo','expedition','gestao','integrations','inventory','notificador','portaria','receipt','routereturn','security','task-interleaving','touchpicking']},
+    {nome: 'MG, NE e NO', url: 'localhost:8001', servicos : ['blitz-refugo']}
   ]
 };

@@ -1,0 +1,7 @@
+************************* HOMOLOG *************************
+Ip Interno : 172.19.234.138
+Ip Externo : 54.94.190.76
+
+Acesso Remoto
+    Login : syswms
+    Pass  : JHd3B#$1srm

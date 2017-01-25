@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Serviços WMS</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body style="background-color: #f2f7ff">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	function trataInformacao(objJsonRetorno){
+		$("#painel").html("");
+		$.each(objJsonRetorno, function( key, value ) {
+			var intContNok = 0;
+			var strNomClasse = "redCard";
+			var arrServicosNok = [];
+			var intContServico = 0;
+			$.each(value, function(chave, valor){
+				$.each(valor, function(keySon, valorSon){
+					intContServico++;
+					if(valorSon == "NOK"){
+						intContNok++ //CONTA QUANTOS SERVICOS ESTAO FORA
+						arrServicosNok.push(keySon);
+					}
+				});
+			});
+
+			if(intContNok == 0){
+				strNomClasse = "greenCard";
+			} else {
+				strNomClasse = "redCard";
+			}
+
+			/*TRATAMENTO DO ARRAY DE SERVICOS FORA*/
+			var strServicosFora = "";
+			$.each(arrServicosNok, function(keyServico, valueServico){
+				strServicosFora += "O serviço " + valueServico + " do servidor " + key + " está fora<br>";
+			});
+
+			if(strServicosFora == ""){
+				strServicosFora = "Todos os serviços do servidor " + key + " estão normais";
+			}
+
+			if(intContServico == intContNok){
+				strServicosFora = "Todos os serviços do servidor " + key + " estão fora";
+			}
+
+			var html = "";
+			html +=  "<div id='card' class='"+strNomClasse+"';>";
+			html += 	 "<h1>"+key+"</h1>";
+			html += 	 "<h6>"+strServicosFora+"</h6>";
+			html +=  "</div>";
+  		$("#painel").append(html);
+		});
+	};
+
+	function verificaServicos () {
+		$.getJSON("http://localhost:3000/", function(retorno){
+			trataInformacao(retorno);
+		});
+	}
+
+	//verificaServicos();
+	var cont = 0;
+	window.setInterval(function(){
+		verificaServicos();
+		cont++;
+		console.log("Executou "+cont+" vezes");
+	}, 3000);
+
+});
+</script>
+	<div id="painel" class="centralizaConteudo"></div>
+</body>
+</html>

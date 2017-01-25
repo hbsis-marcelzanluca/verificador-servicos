@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daschboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var daschbordUrl = [
+                'http://dt-01905:3000/',
+                'http://localhost:63342/verificador-servicos-interface/indexj.html'
+        ];
+
+        function montaFrames(item, index){
+            $('body').append('<iframe id="frame'+index+'" src="'+item+'" hidden />')
+        }
+
+
+        $(function() {
+            daschbordUrl.forEach(montaFrames);
+
+            var cont = 0;
+            var anterior = 0;
+            $('#frame'+anterior).show();
+
+            window.setInterval(function(){
+                $('#frame'+anterior).slideUp(1000);
+                anterior = (anterior+1) >= daschbordUrl.length ? 0 : anterior+1;
+                $('#frame'+anterior).slideDown(1000);
+                cont++;
+            }, 10000);
+        });
+
+    </script>
+    <style>
+        *{
+            border: none;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden ;
+        }
+    </style>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="footer">HBSIS Soluções em TI - WMS</div>
+</body>
+</html>
